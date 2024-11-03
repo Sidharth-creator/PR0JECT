@@ -21,9 +21,11 @@ OR WASTING THEIR TIME BUT NOW THEY CAN HAPPILY WASTE THEIR TIME IN OUR NEW THREE
 ## TECHNICAL DETAILS
 FOR SOFTWARE:
           
-           LANGUAGE:JAVASCRIPT
+           LANGUAGE:JAVASCRIPT,html,css
            TOOLS USED:VSCODE
            
 ![image](https://github.com/user-attachments/assets/356c81fb-5c5e-4779-a852-efb662ce0def)
 ![image](https://github.com/user-attachments/assets/e08c3050-fded-496b-b2f7-7f5e87a92854)
 ![image](https://github.com/user-attachments/assets/ace1a4c5-84dd-4fa2-87dd-a6c99edefe97)
+
+
