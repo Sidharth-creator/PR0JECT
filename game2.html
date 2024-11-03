@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zero Finder</title>
+  </head>
+  <body
+    style="
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f4f4f9;
+      margin: 0;
+    "
+  >
+    <div style="text-align: center">
+      <h1 style="color: #333; margin-bottom: 20px">Zero Finder</h1>
+      <p style="color: #666">
+        Enter a number and choose an operation to make it zero!
+      </p>
+
+      <input
+        type="number"
+        id="userNumber"
+        placeholder="Enter a number"
+        style="
+          padding: 10px;
+          width: 100px;
+          margin-bottom: 20px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+        "
+      />
+
+      <select
+        id="operation"
+        style="
+          padding: 10px;
+          border-radius: 5px;
+          margin-bottom: 20px;
+          border: 1px solid #ccc;
+        "
+      >
+        <option value="ADD">Add</option>
+        <option value="SUB">Subtract</option>
+        <option value="MULT">Multiply</option>
+      </select>
+
+      <div
+        id="result"
+        style="font-size: 18px; color: #3498db; margin-top: 20px"
+      ></div>
+
+      <button
+        onclick="findZero()"
+        style="
+          padding: 10px 20px;
+          color: #fff;
+          background-color: #e67e22;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-top: 20px;
+        "
+      >
+        Calculate
+      </button>
+    </div>
+
+    <script>
+      function findZero() {
+        const number = parseInt(document.getElementById("userNumber").value);
+        const operation = document.getElementById("operation").value;
+        let resultMessage = "";
+
+        if (!isNaN(number)) {
+          if (operation === "ADD") {
+            const addValue = -1 * number;
+            resultMessage = `${number} + (${addValue}) = 0. To make '${number}' zero, add ${addValue}.`;
+          } else if (operation === "SUB") {
+            const subValue = number > 0 ? number : -1 * number;
+            resultMessage = `${number} - (${subValue}) = 0. To make '${number}' zero, subtract ${subValue}.`;
+          } else if (operation === "MULT") {
+            resultMessage = `${number} * 0 = 0. To make '${number}' zero, multiply it by 0.`;
+          }
+        } else {
+          resultMessage = "Please enter a valid number.";
+        }
+
+        document.getElementById("result").innerText = resultMessage;
+      }
+    </script>
+  </body>
+</html>
